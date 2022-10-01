@@ -57,6 +57,6 @@ class ProductController
         $data = readJSON();
 
         (new Product())->massDelete($data["ids"]);
-        return json_encode(implode(",", $data["ids"]) . " deleted", JSON_PRETTY_PRINT);
+        return json_encode(["data" => implode(",", $data["ids"]) . " deleted"], JSON_PRETTY_PRINT);
     }
 }
