@@ -22,7 +22,7 @@ class Product extends Model
         $rules = [
             'sku' => [
                 new MustNotBeEmpty(),
-                new MustBeANumber(),
+                // new MustBeANumber(),
                 new MustBeUnique(),
             ],
             'price' => [
